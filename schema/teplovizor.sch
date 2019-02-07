@@ -1,0 +1,373 @@
+EESchema Schematic File Version 4
+LIBS:teplovizor-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 5C5C4555
+P 4260 1810
+F 0 "A1" H 4260 724 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 4260 633 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 4410 860 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 4260 810 50  0001 C CNN
+	1    4260 1810
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery BT1
+U 1 1 5C5C4880
+P 1130 1320
+F 0 "BT1" H 1238 1366 50  0000 L CNN
+F 1 "Battery" H 1238 1275 50  0000 L CNN
+F 2 "" V 1130 1380 50  0001 C CNN
+F 3 "~" V 1130 1380 50  0001 C CNN
+	1    1130 1320
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J1
+U 1 1 5C5C49DB
+P 2330 800
+F 0 "J1" H 2357 826 50  0000 L CNN
+F 1 "Charge +" H 2357 735 50  0000 L CNN
+F 2 "" H 2330 800 50  0001 C CNN
+F 3 "~" H 2330 800 50  0001 C CNN
+	1    2330 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J2
+U 1 1 5C5C4AED
+P 2330 1120
+F 0 "J2" H 2357 1146 50  0000 L CNN
+F 1 "DC Step Up IN +" H 2357 1055 50  0000 L CNN
+F 2 "" H 2330 1120 50  0001 C CNN
+F 3 "~" H 2330 1120 50  0001 C CNN
+	1    2330 1120
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J3
+U 1 1 5C5C4C7A
+P 2330 1520
+F 0 "J3" H 2357 1546 50  0000 L CNN
+F 1 "Chare -" H 2357 1455 50  0000 L CNN
+F 2 "" H 2330 1520 50  0001 C CNN
+F 3 "~" H 2330 1520 50  0001 C CNN
+	1    2330 1520
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J4
+U 1 1 5C5C4CDB
+P 2340 1750
+F 0 "J4" H 2368 1776 50  0000 L CNN
+F 1 "DC Step Up IN -" H 2368 1685 50  0000 L CNN
+F 2 "" H 2340 1750 50  0001 C CNN
+F 3 "~" H 2340 1750 50  0001 C CNN
+	1    2340 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 5C5C5E4B
+P 1740 1120
+F 0 "SW1" H 1740 1355 50  0000 C CNN
+F 1 "SW_SPST" H 1740 1264 50  0000 C CNN
+F 2 "" H 1740 1120 50  0001 C CNN
+F 3 "" H 1740 1120 50  0001 C CNN
+	1    1740 1120
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2130 1120 1940 1120
+Wire Wire Line
+	1130 1120 1540 1120
+Wire Wire Line
+	1130 1120 1130 800 
+Wire Wire Line
+	1130 800  2130 800 
+Connection ~ 1130 1120
+Wire Wire Line
+	1130 1520 1510 1520
+Wire Wire Line
+	2140 1750 2060 1750
+Wire Wire Line
+	2060 1750 2060 1520
+Connection ~ 2060 1520
+Wire Wire Line
+	2060 1520 2130 1520
+$Comp
+L Connector:Conn_01x06_Female J9
+U 1 1 5C5C6579
+P 6270 1220
+F 0 "J9" H 6298 1196 50  0000 L CNN
+F 1 "Bluetooth" H 6298 1105 50  0000 L CNN
+F 2 "" H 6270 1220 50  0001 C CNN
+F 3 "~" H 6270 1220 50  0001 C CNN
+	1    6270 1220
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J5
+U 1 1 5C5C6C42
+P 2340 2270
+F 0 "J5" H 2368 2296 50  0000 L CNN
+F 1 "DC Step Up OUT +" H 2368 2205 50  0000 L CNN
+F 2 "" H 2340 2270 50  0001 C CNN
+F 3 "~" H 2340 2270 50  0001 C CNN
+	1    2340 2270
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J6
+U 1 1 5C5C6CC1
+P 2340 2550
+F 0 "J6" H 2368 2576 50  0000 L CNN
+F 1 "DC Step Up OUT -" H 2368 2485 50  0000 L CNN
+F 2 "" H 2340 2550 50  0001 C CNN
+F 3 "~" H 2340 2550 50  0001 C CNN
+	1    2340 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5C5C6F99
+P 1510 1750
+F 0 "#PWR01" H 1510 1500 50  0001 C CNN
+F 1 "GND" H 1515 1577 50  0000 C CNN
+F 2 "" H 1510 1750 50  0001 C CNN
+F 3 "" H 1510 1750 50  0001 C CNN
+	1    1510 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1510 1750 1510 1520
+Connection ~ 1510 1520
+Wire Wire Line
+	1510 1520 2060 1520
+$Comp
+L power:GND #PWR02
+U 1 1 5C5C70DE
+P 2070 2630
+F 0 "#PWR02" H 2070 2380 50  0001 C CNN
+F 1 "GND" H 2075 2457 50  0000 C CNN
+F 2 "" H 2070 2630 50  0001 C CNN
+F 3 "" H 2070 2630 50  0001 C CNN
+	1    2070 2630
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2140 2550 2070 2550
+Wire Wire Line
+	2070 2550 2070 2630
+Wire Wire Line
+	2140 2270 2080 2270
+$Comp
+L power:GND #PWR05
+U 1 1 5C5C755E
+P 4940 2830
+F 0 "#PWR05" H 4940 2580 50  0001 C CNN
+F 1 "GND" H 4945 2657 50  0000 C CNN
+F 2 "" H 4940 2830 50  0001 C CNN
+F 3 "" H 4940 2830 50  0001 C CNN
+	1    4940 2830
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4260 2810 4360 2810
+Wire Wire Line
+	4360 2810 4940 2810
+Wire Wire Line
+	4940 2810 4940 2830
+Connection ~ 4360 2810
+Wire Wire Line
+	3760 1210 3470 1210
+Wire Wire Line
+	3760 1310 3470 1310
+Text Label 3470 1210 0    50   ~ 0
+RX
+Text Label 3470 1310 0    50   ~ 0
+TX
+Wire Wire Line
+	6060 2370 5870 2370
+Wire Wire Line
+	6060 2470 5870 2470
+$Comp
+L power:GND #PWR09
+U 1 1 5C5C843F
+P 5860 2040
+F 0 "#PWR09" H 5860 1790 50  0001 C CNN
+F 1 "GND" H 5865 1867 50  0000 C CNN
+F 2 "" H 5860 2040 50  0001 C CNN
+F 3 "" H 5860 2040 50  0001 C CNN
+	1    5860 2040
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6070 1520
+NoConn ~ 6070 1020
+Wire Wire Line
+	6070 1120 5870 1120
+Wire Wire Line
+	6070 1220 5870 1220
+$Comp
+L power:GND #PWR06
+U 1 1 5C5C90E2
+P 5610 1430
+F 0 "#PWR06" H 5610 1180 50  0001 C CNN
+F 1 "GND" H 5615 1257 50  0000 C CNN
+F 2 "" H 5610 1430 50  0001 C CNN
+F 3 "" H 5610 1430 50  0001 C CNN
+	1    5610 1430
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5610 1430 5610 1320
+Text Label 5870 1220 0    50   ~ 0
+TX
+Text Label 5870 1120 0    50   ~ 0
+RX
+Text Label 5870 2370 0    50   ~ 0
+SCL
+Text Label 5870 2470 0    50   ~ 0
+SDA
+NoConn ~ 4160 810 
+NoConn ~ 4360 810 
+Wire Wire Line
+	4760 2310 4940 2310
+Wire Wire Line
+	4760 2210 4940 2210
+Text Label 4940 2210 0    50   ~ 0
+SCL
+Text Label 4940 2310 0    50   ~ 0
+SDA
+NoConn ~ 4760 1210
+NoConn ~ 4760 1310
+NoConn ~ 4760 1610
+NoConn ~ 4760 1810
+NoConn ~ 4760 1910
+NoConn ~ 4760 2010
+NoConn ~ 4760 2110
+NoConn ~ 4760 2410
+NoConn ~ 4760 2510
+NoConn ~ 3760 1410
+NoConn ~ 3760 1510
+NoConn ~ 3760 1610
+NoConn ~ 3760 1710
+NoConn ~ 3760 1810
+NoConn ~ 3760 1910
+NoConn ~ 3760 2010
+NoConn ~ 3760 2110
+NoConn ~ 3760 2210
+NoConn ~ 3760 2310
+NoConn ~ 3760 2410
+NoConn ~ 3760 2510
+$Comp
+L power:+5V #PWR03
+U 1 1 5C5D3B12
+P 2080 2180
+F 0 "#PWR03" H 2080 2030 50  0001 C CNN
+F 1 "+5V" H 2095 2353 50  0000 C CNN
+F 2 "" H 2080 2180 50  0001 C CNN
+F 3 "" H 2080 2180 50  0001 C CNN
+	1    2080 2180
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2080 2180 2080 2270
+$Comp
+L power:+5V #PWR04
+U 1 1 5C5D4114
+P 4460 700
+F 0 "#PWR04" H 4460 550 50  0001 C CNN
+F 1 "+5V" H 4475 873 50  0000 C CNN
+F 2 "" H 4460 700 50  0001 C CNN
+F 3 "" H 4460 700 50  0001 C CNN
+	1    4460 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4460 700  4460 810 
+Wire Wire Line
+	5610 1320 6070 1320
+$Comp
+L power:+5V #PWR07
+U 1 1 5C5D5643
+P 5850 1420
+F 0 "#PWR07" H 5850 1270 50  0001 C CNN
+F 1 "+5V" H 5865 1593 50  0000 C CNN
+F 2 "" H 5850 1420 50  0001 C CNN
+F 3 "" H 5850 1420 50  0001 C CNN
+	1    5850 1420
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6070 1420 5850 1420
+$Comp
+L power:+5V #PWR08
+U 1 1 5C5D5A5E
+P 5860 1940
+F 0 "#PWR08" H 5860 1790 50  0001 C CNN
+F 1 "+5V" H 5875 2113 50  0000 C CNN
+F 2 "" H 5860 1940 50  0001 C CNN
+F 3 "" H 5860 1940 50  0001 C CNN
+	1    5860 1940
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5860 1940 6060 1940
+Wire Wire Line
+	5860 2040 6060 2040
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5C5D6922
+P 1760 2550
+F 0 "#FLG0101" H 1760 2625 50  0001 C CNN
+F 1 "PWR_FLAG" H 1760 2724 50  0000 C CNN
+F 2 "" H 1760 2550 50  0001 C CNN
+F 3 "~" H 1760 2550 50  0001 C CNN
+	1    1760 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2070 2550 1760 2550
+Connection ~ 2070 2550
+$Comp
+L Connector:Conn_01x04_Female J7
+U 1 1 5C5C8C82
+P 6260 2040
+F 0 "J7" H 6287 2016 50  0000 L CNN
+F 1 "GYMCU90640 Power" H 6287 1925 50  0000 L CNN
+F 2 "" H 6260 2040 50  0001 C CNN
+F 3 "~" H 6260 2040 50  0001 C CNN
+	1    6260 2040
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female J8
+U 1 1 5C5C8D92
+P 6260 2470
+F 0 "J8" H 6288 2446 50  0000 L CNN
+F 1 "GYMCU90640 i2c" H 6288 2355 50  0000 L CNN
+F 2 "" H 6260 2470 50  0001 C CNN
+F 3 "~" H 6260 2470 50  0001 C CNN
+	1    6260 2470
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6060 2570
+NoConn ~ 6060 2670
+NoConn ~ 6060 2140
+NoConn ~ 6060 2240
+$EndSCHEMATC
