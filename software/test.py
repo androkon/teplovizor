@@ -9,11 +9,14 @@ def get_emissivity():
 	read = ser.read(4)
 	return read[2]/100
 
+def byte2int(b):
+	return int(b.encode('hex'), 16)
+
 # function to get temperatures from MCU (Celsius degrees x 100)
 def get_temp_array(d):
 
 	# getting ambient temperature
-	T_a = (int(d[1540]) + int(d[1541])*256)/100
+	T_a = (byte2int(d[1540]) + byte2int(d[1541])*256)/100
 
 	# getting raw array of pixels temperature
 	raw_data = d[4:1540]
@@ -33,7 +36,8 @@ Tmax = 40
 Tmin = 20
 
 print ('Configuring Serial port')
-ser = serial.Serial ('/dev/serial0')
+# ser = serial.Serial ('/dev/serial0')
+ser = serial.Serial ('/dev/ttyUSB0')
 ser.baudrate = 115200
 
 # set frequency of module to 4 Hz
